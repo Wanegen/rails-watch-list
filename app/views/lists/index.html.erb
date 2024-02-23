@@ -1,8 +1,39 @@
-<h1 class="text-3xl font-bold underline">Hello !</h1>
-<h3>Vous voulez ajouter une liste ?</h3>
+<div class="h-100 d-flex flex-column align-items-center justify-content-center text-center mt-5">
+  <h1 class="mb-5">Bienvenue la jeunesse !</h1>
 
-<ul>
-  <% @lists.each do |list| %>
-    <h2><li><%= "#{list.name}" %></li></h2>
-  <% end %>
-</ul>
+<% @lists.each do |list| %>
+  <ul class="list-group">
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+          <li class="list-group-item">
+            <h2><%= "#{list.name}" %></h2>
+            <%= link_to "Go to #{list.name}Land", lists_path, class:"btn btn-primary" %>
+          </li>
+        </div>
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+          <li class="list-group-item">
+            <h2><%= "#{list.name}" %></h2>
+            <%= link_to "Go to #{list.name}Land", lists_path, class:"btn btn-primary" %>
+          </li>
+        </div>
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+          <li class="list-group-item">
+            <h2><%= "#{list.name}" %></h2>
+            <%= link_to "Go to #{list.name}Land", lists_path, class:"btn btn-primary" %>
+          </li>
+        </div>
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+          <li class="list-group-item">
+            <h2><%= "#{list.name}" %></h2>
+            <%= link_to "Go to #{list.name}Land", lists_path, class:"btn btn-primary" %>
+          </li>
+        </div>
+      </div>
+    </div>
+  </ul>
+<% end %>
+
+  <%= link_to "Create a list", new_list_path, class:"btn btn-success mt-4" %>
+
+</div>
