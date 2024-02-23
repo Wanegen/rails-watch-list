@@ -1,0 +1,8 @@
+<h1 class="text-3xl font-bold underline">Hello !</h1>
+<h3>Vous voulez ajouter une liste ?</h3>
+
+<ul>
+  <% @lists.each do |list| %>
+    <h2><li><%= "#{list.name}" %></li></h2>
+  <% end %>
+</ul>
