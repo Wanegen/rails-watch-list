@@ -1,0 +1,7 @@
+<h1><%= "#{movie.title}" %></h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <h2><li><%= "#{movie.overview}" %></li></h2>
+  <% end %>
+</ul>
